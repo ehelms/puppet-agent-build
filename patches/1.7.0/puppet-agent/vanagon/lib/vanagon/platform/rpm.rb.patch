@@ -1,4 +1,12 @@
-17c17
-<         "PATH=/opt/freeware/bin:$$PATH #{@rpmbuild} -bb --target #{@architecture} #{rpm_defines} $(tempdir)/rpmbuild/SPECS/#{project.name}.spec",
+14,20c14,15
+<         if project.source_artifacts
+<           rpmbuild = "#{@rpmbuild} -ba"
+<           artifact_copy = "mkdir -p output/#{target_source_output_dir}; cp $(tempdir)/rpmbuild/RPMS/**/*.rpm ./output/#{target_dir}; cp $(tempdir)/rpmbuild/SRPMS/*.rpm ./output/#{target_source_output_dir}"
+<         else
+<           rpmbuild = "#{@rpmbuild} -bb"
+<           artifact_copy = "cp $(tempdir)/rpmbuild/*RPMS/**/*.rpm ./output/#{target_dir}"
+<         end
 ---
->         "PATH=/opt/freeware/bin:$$PATH #{@rpmbuild} -ba --target #{@architecture} #{rpm_defines} $(tempdir)/rpmbuild/SPECS/#{project.name}.spec",
+>         rpmbuild = "#{@rpmbuild} -ba"
+>         artifact_copy = "mkdir -p output/#{target_source_output_dir}; cp $(tempdir)/rpmbuild/RPMS/**/*.rpm ./output/#{target_dir}; cp $(tempdir)/rpmbuild/SRPMS/*.rpm ./output/#{target_source_output_dir}"
+

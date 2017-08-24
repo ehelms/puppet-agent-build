@@ -1,23 +1,23 @@
 ---
-- name: patch ruby-selinux component
-  patch:
-    src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/ruby-selinux.rb.patch"
-    dest: "{{ playbook_dir }}/puppet-agent/configs/components/ruby-selinux.rb"
+#- name: patch ruby-selinux component
+#  patch:
+  #    src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/ruby-selinux.rb.patch"
+  #  dest: "{{ playbook_dir }}/puppet-agent/configs/components/ruby-selinux.rb"
 
-- name: patch leatherman component
-  patch:
-    src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/leatherman.rb.patch"
-    dest: "{{ playbook_dir }}/puppet-agent/configs/components/leatherman.rb"
+  #- name: patch leatherman component
+  #patch:
+    # src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/leatherman.rb.patch"
+    #dest: "{{ playbook_dir }}/puppet-agent/configs/components/leatherman.rb"
 
-- name: patch cpp-hocon component
-  patch:
-    src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/cpp-hocon.rb.patch"
-    dest: "{{ playbook_dir }}/puppet-agent/configs/components/cpp-hocon.rb"
+    #- name: patch cpp-hocon component
+    #patch:
+    #src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/cpp-hocon.rb.patch"
+    #dest: "{{ playbook_dir }}/puppet-agent/configs/components/cpp-hocon.rb"
 
-- name: patch cpp-pcp-client component
-  patch:
-    src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/cpp-pcp-client.rb.patch"
-    dest: "{{ playbook_dir }}/puppet-agent/configs/components/cpp-pcp-client.rb"
+    #- name: patch cpp-pcp-client component
+    #patch:
+      #src: "patches/{{ puppet_agent_version }}/puppet-agent/configs/components/cpp-pcp-client.rb.patch"
+      #dest: "{{ playbook_dir }}/puppet-agent/configs/components/cpp-pcp-client.rb"
 
 - name: patch facter component
   patch:

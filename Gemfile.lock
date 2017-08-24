@@ -36,6 +36,3 @@ DEPENDENCIES
   pry-byebug
   pry-stack_explorer
   rake-notes
-
-BUNDLED WITH
-   1.11.2

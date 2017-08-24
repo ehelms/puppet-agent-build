@@ -166,7 +166,7 @@ module PuppetAgentBuild
         file.write(build_host_lines.join(''))
         file.puts
         file.puts("[localhost]")
-        file.puts("localhost ansible_connections=local")
+        file.puts("localhost ansible_connection=local")
       end
     end
 

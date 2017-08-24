@@ -9,14 +9,14 @@
     gcc_version: 4.8.5
     yaml_cpp_version: 0.5.3
     swig_version: 3.0.10
-    puppet_agent_version: 1.8.2
+    puppet_agent_version: 1.10.6
     puppet_agent_build_timestamp: "{{ ansible_date_time.date }}-{{ ansible_date_time.hour }}:{{ ansible_date_time.minute }}:{{ ansible_date_time.second }}"
   tasks:
     - include: subplays/prep_box.yaml
 
 - hosts: localhost
   vars:
-    puppet_agent_version: 1.8.2
+    puppet_agent_version: 1.10.6
     puppet_agent_build_timestamp: "{{ ansible_date_time.date }}-{{ ansible_date_time.hour }}:{{ ansible_date_time.minute }}:{{ ansible_date_time.second }}"
   tasks:
     - name: clone puppet-agent
@@ -31,7 +31,7 @@
         repo: https://github.com/puppetlabs/vanagon.git
         dest: "{{ playbook_dir }}/puppet-agent/vanagon"
         update: false
-        version: 0.8.2
+        version: 0.13.1
 
     - name: patch vanagon rpm type
       patch:
